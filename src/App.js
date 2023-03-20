@@ -1,25 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import StudentForm from './Component/CreateStudent/CreateStu';
+import StudentView from './Component/ViewStudent/StudentView';
+import StudentEdit from './Component/EditStudent/EditStu';
+import { Route, Routes } from 'react-router-dom';
+// import { useState } from 'react';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    // const [isEdit, setIsEdit] = useState(false);
+
+    // const handleEdit = () => {
+
+    //     setIsEdit(!isEdit)
+    // }
+
+    return (
+        <>
+            {/* {
+                isEdit ? <StudentEdit handleEdit={handleEdit} /> : <StudentForm />
+            }
+            <StudentView handleEdit={handleEdit} /> */}
+
+            <Routes>
+                <Route path='/' element={<StudentForm />} />
+                <Route path='/studentedit' element={<StudentEdit />} />
+                <Route path='/studentview' element={<StudentView />} />
+            </Routes>
+        </>
+    )
 }
 
 export default App;

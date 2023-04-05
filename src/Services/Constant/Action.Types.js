@@ -3,3 +3,12 @@ export const DELETE_STU = "DELETESTUDENT";
 export const GET_INFO = "INFOSTUDENT";
 export const UPDATE_STU = "UPDATESTUDENT";
 export const GET_STUDENTS = "GETSTUDENTS";
+
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS"
+export const LOGIN_FAIL = "LOGIN_FAIL"
+
+export const SIGNUP_SUCCESS = "SIGNUP_SUCCESS"
+export const SIGNUP_FAIL = "SIGNUP_FAIL"
+
+export const LOGOUT_SUCCESS = "LOGOUT_SUCCESS"
+export const LOGOUT_FAIL = "LOGOUT_FAIL"

@@ -72,13 +72,11 @@ body {
     padding-top: 30px;
 }
 
-.form {
-    width: 50%;
-    padding-top: 0px;
+form{
+    width: 90%;
 }
 
 .image {
-    width: 50%;
     margin-left: 20px;
 }
 

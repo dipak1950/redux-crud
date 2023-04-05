@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Container, Row, Button, Form } from 'react-bootstrap';
-import { CreateStudent } from '../../Services/Action/Student.Action'
+import { CreateStudent, createStustorage } from '../../Services/Action/Student.Action'
 import { useDispatch, useSelector } from 'react-redux';
 import './CreateStu.css'
 import { useNavigate } from 'react-router-dom';
@@ -32,8 +32,9 @@ function StudentForm() {
 
         const lastId = StudentList.length > 0 ? StudentList[StudentList.length - 1].id - 0 : 0;
 
-        const data = { ...initial, id: lastId + 1 };
-        dispatch(CreateStudent(data));
+        const data = { ...initial, id: lastId + 1 }
+
+        dispatch(createStustorage(data));
 
         setInitial({
             name: '',
@@ -43,10 +44,11 @@ function StudentForm() {
             course: '',
             gender: ''
         })
-        navigate("/studentview")
+
+        // navigate('/');
     }
 
-   
+
     return (
         <>
             <Container>

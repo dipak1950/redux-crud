@@ -18,10 +18,9 @@ const LoginFail = (err) => {
     }
 }
 
-const LogoutSuccess = (user) => {
+const LogoutSuccess = () => {
     return {
         type: LOGOUT_SUCCESS,
-        payload: user
     }
 }
 

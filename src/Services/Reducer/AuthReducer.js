@@ -54,7 +54,7 @@ const AuthReducer = (state = initialState, action) => {
             return {
                 ...state,
                 isLoading: false,
-                user: action.payload,
+                user: null,
                 error: null
             }
             break;
